@@ -1,0 +1,8 @@
+{
+  "name": "Habit streaks.1",
+  "description": "A habit streaks app that will help people to build their good habits.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

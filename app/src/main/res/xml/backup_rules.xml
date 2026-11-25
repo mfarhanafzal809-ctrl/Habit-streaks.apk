@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Include core SQLite database and user preferences -->
+    <include domain="database" path="." />
+    <include domain="sharedpref" path="." />
+    <!-- Exclude custom ringtones and local export files to keep backup within quota -->
+    <exclude domain="file" path="custom_ringtones" />
+    <exclude domain="file" path="backups" />
+</full-backup-content>

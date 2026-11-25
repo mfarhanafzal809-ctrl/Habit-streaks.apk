@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Include Room SQLite database containing user habits and completions -->
+        <include domain="database" path="." />
+        <!-- Include user preferences such as theme, notifications, display modes -->
+        <include domain="sharedpref" path="." />
+        <!-- Exclude large custom sound/video files from cloud backup to prevent exceeding 25MB quota -->
+        <exclude domain="file" path="custom_ringtones" />
+        <!-- Exclude manual export JSON backups from cloud backup to avoid duplication -->
+        <exclude domain="file" path="backups" />
+    </cloud-backup>
+    <device-transfer>
+        <!-- For direct device-to-device migration, transfer complete user data including custom sounds and backups -->
+        <include domain="database" path="." />
+        <include domain="sharedpref" path="." />
+        <include domain="file" path="custom_ringtones" />
+        <include domain="file" path="backups" />
+    </device-transfer>
+</data-extraction-rules>
